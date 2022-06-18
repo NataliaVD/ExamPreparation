@@ -108,8 +108,12 @@ namespace SeleniumTests
             emailField.SendKeys("mati@jac.ob");
             var createButton = driver.FindElement(By.Id("create"));
             createButton.Click();
+            
+            
             //var allContacts = driver.FindElement(By.XPath("/html/body/main/div"));
             //var lastContact = allContacts.Last();
+            
+            
             var allContacts = driver.FindElements(By.CssSelector("table.contact-entry"));
             var lastContact = allContacts.Last();
             var lastContactFirstName = lastContact.FindElement(By.CssSelector("tr.fname > td")).Text;
